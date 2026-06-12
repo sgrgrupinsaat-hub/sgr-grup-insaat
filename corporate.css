@@ -1,0 +1,1710 @@
+/* ==========================================================================
+   SGR GRUP - PREMIUM DİNAMİK KURUMSAL KAPSAYICI (HEADER ÇAKIŞMA ÖNLEYİCİ)
+   ========================================================================== */
+.corporate-content-area {
+    display: none; /* Standartta gizli kanka */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: #ffffff;
+    /* KANKA PADDING ÜST DEĞERİNİ 160px YAPTIK, YAZILAR NAVBARDAN AŞAĞIYA TERTEMİZ DÜŞTÜ */
+    padding: 160px 0 140px 0; 
+    min-height: 80vh;
+    position: relative;
+    z-index: 10;
+}
+
+/* Sayfa Aktif Olduğunda Süzülerek Gelme Efekti */
+.corporate-content-area.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Kurumsal İç Sayfa Düzeni */
+.corp-page-header {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.corp-page-header h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.corp-page-header h2 span {
+    color: var(--accent-green);
+}
+
+/* Çift Sütunlu Lüks Bilgi Düzeni kanka */
+.corp-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+.corp-text-col p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #0f172a;
+    opacity: 0.8;
+    margin-bottom: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* SGR Farkı Maddeleri kanka */
+.corp-highlight-box {
+    background: rgba(10, 92, 54, 0.03);
+    border-left: 4px solid var(--accent-green);
+    padding: 32px;
+    border-radius: 0 12px 12px 0;
+    margin-top: 32px;
+}
+
+.corp-highlight-box h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+/* Yönetim Kurulu Mesajı Özel İmza Alanı */
+.chairman-signature-box {
+    margin-top: 40px;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    padding-top: 24px;
+}
+
+.chairman-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    display: block;
+}
+
+.chairman-title {
+    font-size: 13px;
+    color: var(--accent-green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+/* ==========================================================================
+   SGR GRUP - KUSURSUZ İÇ SAYFA ASİMETRİK GÖRSEL VE KART MİMARİSİ
+   ========================================================================== */
+
+/* Üst Küçük Başlık Etiketi kanka */
+.corp-tagline {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Kalın Giriş Metni Sınıfı */
+.corp-lead {
+    font-size: 18px !important;
+    font-weight: 600;
+    line-height: 1.7 !important;
+    color: #0f172a !important;
+    opacity: 0.95 !important;
+}
+
+/* Sağ Sütun Görsel Sahnesi kanka */
+.corp-visual-col {
+    position: relative;
+    width: 100%;
+}
+
+.corp-asymmetric-wrapper {
+    position: relative;
+    height: 480px;
+    width: 100%;
+}
+
+/* Ortak Fotoğraf Kutusu Ayarları kanka */
+.corp-img-box {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.corp-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.corp-img-box:hover img {
+    transform: scale(1.03);
+}
+
+/* Sol Üstteki Büyük Fotoğraf */
+.img-large {
+    width: 80%;
+    height: 380px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Sağ Alttaki Örtüşen Küçük Fotoğraf kanka */
+.img-small {
+    width: 55%;
+    height: 240px;
+    top: 200px;
+    right: 0;
+    z-index: 2;
+}
+
+/* Havada Duran Lüks Rozet */
+.corp-floating-badge {
+    position: absolute;
+    bottom: 40px;
+    left: -24px;
+    background: #ffffff;
+    padding: 20px 28px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    z-index: 3;
+    border-left: 4px solid var(--accent-green);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.corp-floating-badge .badge-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-green);
+    line-height: 1;
+}
+
+.corp-floating-badge .badge-lbl {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 0.05em;
+}
+
+/* Vizyon & Misyon İçin İkonlu Kart Tasarımları kanka */
+.corp-card-item {
+    background: rgba(15, 23, 42, 0.01);
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    padding: 32px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.corp-card-item:hover {
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+    border-color: rgba(10, 92, 54, 0.15);
+}
+
+.corp-card-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(10, 92, 54, 0.08);
+    color: var(--accent-green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.corp-card-item h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Kalite Sayfası Elit Özellik Listesi */
+.corp-features-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.c-feature {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.c-dot {
+    color: var(--accent-green);
+    font-size: 12px;
+}
+
+/* Mobil Ekran Uyumluluk Ayarı */
+@media (max-width: 992px) {
+    .corp-info-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .corp-page-header h2 {
+        font-size: 32px;
+    }
+    .corp-asymmetric-wrapper {
+        height: 380px;
+        margin-top: 32px;
+    }
+    .img-large { width: 100%; height: 320px; }
+    .img-small { display: none; } /* Mobilde üst üste binmesin diye küçüğü gizliyoruz kanka */
+    .corp-floating-badge { left: 20px; bottom: 20px; }
+}
+/* ==========================================================================
+   SGR GRUP - HAKKIMIZDA SAYFASI ALT ÜÇLÜ PREMIUM KART GRİDİ kanka
+   ========================================================================== */
+.corp-bottom-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr; /* Sağdaki güvence kartına biraz daha genişlik verdik okunsun diye kanka */
+    gap: 32px;
+    margin-top: 80px; /* Üstteki metin ve görsel alanıyla jilet gibi mesafe */
+    position: relative;
+    z-index: 5;
+}
+
+/* Standart Beyaz Kart Tasarımları kanka */
+.corp-mini-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.corp-mini-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border-color: rgba(10, 92, 54, 0.15);
+}
+
+/* Kartların Küçük İkon Yuvaları kanka */
+.corp-mini-card-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(10, 92, 54, 0.06);
+    color: var(--accent-green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.corp-mini-card h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.corp-mini-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #0f172a;
+    opacity: 0.75;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* O YAPAY ZEKANIN ÇİZDİĞİ KOYU YEŞİL ŞOV KARTI kanka */
+.corp-mini-card.highlight-green {
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border: none;
+    box-shadow: 0 20px 40px rgba(10, 92, 54, 0.2);
+}
+
+.corp-mini-card.highlight-green .corp-mini-card-icon {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.corp-mini-card.highlight-green h4 {
+    color: #ffffff;
+}
+
+.corp-mini-card.highlight-green p {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Mobil Ekranlarda Kartlar Üst Üste Düzenli Düşsün kanka */
+@media (max-width: 992px) {
+    .corp-bottom-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 48px;
+    }
+}
+/* ==========================================================================
+   SGR GRUP - VİZYON MİSYON YENİ FOTOĞRAFSIZ İKİ DEV PANEL MİMARİSİ
+   ========================================================================== */
+
+/* Fotoğraf kalkınca iki eşit, geniş sütuna geçiyoruz kanka */
+.corp-vision-wide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: stroke; /* Kart boyları eşitlensin diye kanka */
+    margin-bottom: 32px;
+}
+
+/* Dev Kurumsal Manifesto Kartları kanka */
+.corp-wide-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    border-radius: 20px;
+    padding: 48px 40px; /* İçerisi iyice nefes alsın, lüks dursun */
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.corp-wide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.07);
+    border-color: rgba(10, 92, 54, 0.15);
+}
+
+.corp-wide-card h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.corp-wide-card p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: #0f172a;
+    opacity: 0.75;
+    margin-bottom: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.corp-wide-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobil Ekranlarda Üst Üste Tam Genişlik Akışı kanka */
+@media (max-width: 992px) {
+    .corp-vision-wide-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .corp-wide-card {
+        padding: 36px 28px;
+    }
+}
+/* ==========================================================================
+   SGR GRUP - KALİTE ANLAYIŞI ELİT TİPOGRAFİ VE BLOK TASARIMI
+   ========================================================================== */
+
+/* Merkeze Oturan Manifesto Kapsayıcısı */
+.corp-text-full-width {
+    position: relative;
+}
+
+/* Giriş Paragrafları - Liderlik Vurgusu */
+.corp-text-full-width > div:first-child {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+/* Giriş metninin altına lüks bir çizgi (gradient) kanka */
+.corp-text-full-width > div:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(10,92,54,0.2) 0%, var(--accent-green) 50%, rgba(10,92,54,0.2) 100%);
+    border-radius: 2px;
+}
+
+/* Manifesto Blokları - Standart metin olmaktan çıkaran dokunuşlar */
+.corp-manifesto-block {
+    position: relative;
+    padding: 32px 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+    transition: all 0.4s ease;
+    border-left: 3px solid transparent; /* Hover için rezerv alan kanka */
+}
+
+/* Hover olduğunda sol taraftan o elit yeşil çizgi zarifçe belirsin kanka */
+.corp-manifesto-block:hover {
+    transform: translateX(8px);
+    border-left: 3px solid var(--accent-green);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    background: linear-gradient(90deg, rgba(10,92,54,0.01) 0%, #ffffff 10%);
+}
+
+.corp-manifesto-block h3 {
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+/* Başlıkların yanına ufak, teknik bir nokta efekti (mimari çizim hissi verir) */
+.corp-manifesto-block h3::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-green);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.corp-manifesto-block:hover h3::before {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(10,92,54,0.4);
+}
+
+.corp-manifesto-block p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #0f172a;
+}
+
+/* Mobil için padding ayarı */
+@media (max-width: 992px) {
+    .corp-manifesto-block {
+        padding: 24px;
+    }
+    .corp-manifesto-block:hover {
+        transform: translateX(4px);
+    }
+}
+/* ==========================================================================
+   SGR GRUP - YÖNETİM MESAJI ÖZEL TASARIMI (FOTOĞRAFSIZ LÜKS DÜZEN)
+   ========================================================================== */
+
+.corp-management-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Metin kutusunun lüks kağıt / kart efekti */
+.corp-management-content {
+    background: #ffffff;
+    padding: 64px 72px;
+    border-radius: 20px;
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sol üst köşedeki o zarif ve devasa tırnak işareti (quote) dokunuşu */
+.corp-management-content::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 32px;
+    font-size: 140px;
+    font-family: serif;
+    color: var(--accent-green);
+    opacity: 0.06; /* Göz yormayacak kadar silik, elit bir fligran gibi */
+    line-height: 1;
+    z-index: 0;
+}
+
+.corp-management-content p {
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: #0f172a;
+    opacity: 0.85;
+    margin-bottom: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    z-index: 2; /* Yazılar fligranın üstünde kalsın */
+}
+
+/* Giriş metni vurgusu */
+.corp-management-content .corp-lead {
+    font-size: 19px !important;
+    font-weight: 600;
+    opacity: 0.95;
+    color: #0f172a;
+    margin-bottom: 32px;
+}
+
+/* Sağ alta yaslanmış kurumsal imza alanı */
+.corp-management-signature {
+    margin-top: 56px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Tamamen sağa yaslı, resmi mektup gibi */
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.corp-management-signature .signature-line {
+    width: 40px;
+    height: 3px;
+    background: var(--accent-green);
+    margin-bottom: 12px;
+    border-radius: 2px;
+}
+
+.corp-management-signature .chairman-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+/* Mobil ekranlar için daraltma ayarları */
+@media (max-width: 768px) {
+    .corp-management-content {
+        padding: 40px 24px;
+    }
+    .corp-management-content::before {
+        font-size: 100px;
+        top: 0px;
+        left: 16px;
+    }
+}
+/* ==========================================================================
+   SGR GRUP - VİZYON & MİSYON GELİŞTİRİLMİŞ SAYFA BLOKLARI
+   ========================================================================== */
+
+.vision-page-container {
+    padding-bottom: 120px;
+}
+
+.corp-vision-wide-grid {
+    align-items: stretch;
+}
+
+.vision-main-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-main-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    right: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    opacity: 0.55;
+}
+
+.vision-card-number {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+}
+
+/* Yeşil imza bandı */
+
+.vision-signature-band {
+    margin-top: 42px;
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-radius: 24px;
+    padding: 44px 48px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(10, 92, 54, 0.16);
+}
+
+.vision-signature-band::after {
+    content: '';
+    position: absolute;
+    right: -110px;
+    bottom: -120px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.vision-band-content,
+.vision-band-stats {
+    position: relative;
+    z-index: 2;
+}
+
+.vision-band-content span {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.68);
+    margin-bottom: 14px;
+}
+
+.vision-band-content h3 {
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.vision-band-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.vision-band-stats div {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+}
+
+.vision-band-stats strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.vision-band-stats small {
+    display: block;
+    font-size: 11px;
+    line-height: 1.45;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+/* Alt strateji kartları */
+
+.vision-principles-grid {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.vision-principle-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.055);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.035);
+    transition: all 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vision-principle-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(10, 92, 54, 0.2);
+    box-shadow: 0 28px 64px rgba(15, 23, 42, 0.075);
+}
+
+.vision-principle-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(10, 92, 54, 0.075);
+    color: var(--accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.vision-principle-card h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.vision-principle-card p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #0f172a;
+    opacity: 0.68;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.vision-principle-card.highlighted {
+    background: #0f172a;
+    border-color: #0f172a;
+}
+
+.vision-principle-card.highlighted .vision-principle-icon {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.vision-principle-card.highlighted h4,
+.vision-principle-card.highlighted p {
+    color: #ffffff;
+}
+
+.vision-principle-card.highlighted p {
+    opacity: 0.78;
+}
+
+/* Responsive */
+
+@media (max-width: 1180px) {
+    .vision-principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vision-signature-band {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .vision-signature-band {
+        padding: 34px 26px;
+        border-radius: 20px;
+    }
+
+    .vision-band-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-principle-card {
+        padding: 26px;
+    }
+}
+/* ==========================================================================
+   SGR GRUP - HAKKIMIZDA SAYFASI GELİŞTİRİLMİŞ PREMIUM BLOKLAR
+   ========================================================================== */
+
+.about-page-premium {
+    padding-bottom: 120px;
+}
+
+.about-hero-grid {
+    align-items: center;
+}
+
+.about-core-list {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.about-core-list div {
+    background: rgba(10, 92, 54, 0.035);
+    border: 1px solid rgba(10, 92, 54, 0.09);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.about-core-list span {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--accent-green);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.about-core-list p {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #0f172a;
+    opacity: 0.72;
+    margin: 0;
+}
+
+.about-image-scene {
+    height: 520px;
+}
+
+.about-floating-seal {
+    position: absolute;
+    left: 8px;
+    bottom: 36px;
+    z-index: 5;
+    background: #ffffff;
+    border-left: 4px solid var(--accent-green);
+    border-radius: 14px;
+    padding: 20px 26px;
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+}
+
+.about-floating-seal strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-green);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.about-floating-seal span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: #0f172a;
+}
+
+/* Yeşil kurumsal imza bandı */
+
+.about-signature-band {
+    margin-top: 76px;
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-radius: 24px;
+    padding: 46px 50px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 42px;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(10, 92, 54, 0.16);
+}
+
+.about-signature-band::after {
+    content: '';
+    position: absolute;
+    right: -110px;
+    bottom: -120px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.about-signature-text,
+.about-signature-points {
+    position: relative;
+    z-index: 2;
+}
+
+.about-signature-text span {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.68);
+    margin-bottom: 14px;
+}
+
+.about-signature-text h3 {
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-signature-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.about-signature-points div {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 22px 18px;
+}
+
+.about-signature-points strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.about-signature-points small {
+    display: block;
+    font-size: 11px;
+    line-height: 1.45;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+/* Alt faaliyet kartları */
+
+.about-sector-grid {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.about-sector-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.055);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.035);
+    transition: all 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-sector-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(10, 92, 54, 0.2);
+    box-shadow: 0 28px 64px rgba(15, 23, 42, 0.075);
+}
+
+.about-sector-card span {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+}
+
+.about-sector-card h4 {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-sector-card p {
+    font-size: 13.5px;
+    line-height: 1.72;
+    color: #0f172a;
+    opacity: 0.68;
+    margin: 0;
+}
+
+.about-sector-card.highlighted {
+    background: #0f172a;
+    border-color: #0f172a;
+}
+
+.about-sector-card.highlighted span,
+.about-sector-card.highlighted h4,
+.about-sector-card.highlighted p {
+    color: #ffffff;
+}
+
+.about-sector-card.highlighted p {
+    opacity: 0.76;
+}
+
+/* Responsive */
+
+@media (max-width: 1180px) {
+    .about-signature-band {
+        grid-template-columns: 1fr;
+    }
+
+    .about-sector-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 860px) {
+    .about-core-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-scene {
+        height: 420px;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-signature-band {
+        padding: 34px 26px;
+        border-radius: 20px;
+    }
+
+    .about-signature-points {
+        grid-template-columns: 1fr;
+    }
+
+    .about-sector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-sector-card {
+        padding: 26px;
+    }
+}
+/* ==========================================================================
+   SGR GRUP - KALİTE ANLAYIŞIMIZ PREMIUM SAYFA
+   ========================================================================== */
+
+.quality-page-premium {
+    padding-bottom: 120px;
+}
+
+.quality-page-header {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quality-page-header p {
+    max-width: 760px;
+    margin: 22px auto 0 auto;
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: #0f172a;
+    opacity: 0.72;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Üst kalite kartları */
+
+.quality-principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 70px;
+}
+
+.quality-principle-card {
+    min-height: 260px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.055);
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.035);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quality-principle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 28px;
+    right: 28px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.quality-principle-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(10, 92, 54, 0.2);
+    box-shadow: 0 28px 64px rgba(15, 23, 42, 0.075);
+}
+
+.quality-principle-card:hover::before {
+    opacity: 0.7;
+}
+
+.quality-principle-card span {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--accent-green);
+    margin-bottom: 24px;
+}
+
+.quality-principle-card h4 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quality-principle-card p {
+    font-size: 13.5px;
+    line-height: 1.72;
+    color: #0f172a;
+    opacity: 0.68;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quality-principle-card.highlighted {
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-color: transparent;
+    box-shadow: 0 24px 60px rgba(10, 92, 54, 0.16);
+}
+
+.quality-principle-card.highlighted::before {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+    opacity: 0.8;
+}
+
+.quality-principle-card.highlighted span,
+.quality-principle-card.highlighted h4,
+.quality-principle-card.highlighted p {
+    color: #ffffff;
+}
+
+.quality-principle-card.highlighted p {
+    opacity: 0.78;
+}
+
+/* Yeşil imza bandı */
+
+.quality-signature-band {
+    margin-top: 42px;
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-radius: 26px;
+    padding: 48px 52px;
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: 44px;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(10, 92, 54, 0.16);
+}
+
+.quality-signature-band::after {
+    content: '';
+    position: absolute;
+    right: -110px;
+    bottom: -120px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.quality-signature-left,
+.quality-signature-right {
+    position: relative;
+    z-index: 2;
+}
+
+.quality-signature-left span {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.68);
+    margin-bottom: 14px;
+}
+
+.quality-signature-left h3 {
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quality-signature-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.quality-signature-right div {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 22px 18px;
+}
+
+.quality-signature-right strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.quality-signature-right small {
+    display: block;
+    font-size: 11px;
+    line-height: 1.45;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+/* Kalite süreci */
+
+.quality-process-section {
+    margin-top: 62px;
+}
+
+.quality-process-title {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 42px auto;
+}
+
+.quality-process-title h3 {
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.16;
+    letter-spacing: -0.04em;
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quality-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.055);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.045);
+}
+
+.quality-process-step {
+    padding: 34px 30px;
+    border-right: 1px solid rgba(15, 23, 42, 0.055);
+    transition: var(--transition-smooth);
+}
+
+.quality-process-step:last-child {
+    border-right: none;
+}
+
+.quality-process-step:hover {
+    background: rgba(10, 92, 54, 0.035);
+}
+
+.quality-process-step span {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--accent-green);
+    margin-bottom: 18px;
+}
+
+.quality-process-step h4 {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.quality-process-step p {
+    font-size: 13.5px;
+    line-height: 1.72;
+    color: #0f172a;
+    opacity: 0.68;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Responsive */
+
+@media (max-width: 1180px) {
+    .quality-principles-grid,
+    .quality-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quality-process-step:nth-child(2) {
+        border-right: none;
+    }
+
+    .quality-process-step:nth-child(1),
+    .quality-process-step:nth-child(2) {
+        border-bottom: 1px solid rgba(15, 23, 42, 0.055);
+    }
+
+    .quality-signature-band {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .quality-principles-grid,
+    .quality-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-principle-card {
+        min-height: auto;
+    }
+
+    .quality-signature-band {
+        padding: 34px 26px;
+        border-radius: 20px;
+    }
+
+    .quality-signature-right {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-process-step {
+        border-right: none;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.055);
+    }
+
+    .quality-process-step:last-child {
+        border-bottom: none;
+    }
+}
+/* ==========================================================================
+   SGR GRUP - YÖNETİM MESAJI GELİŞTİRİLMİŞ PREMIUM SAYFA
+   ========================================================================== */
+
+.chairman-page-premium {
+    padding-bottom: 120px;
+}
+
+.chairman-hero-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 34px;
+    align-items: stretch;
+}
+
+/* Sol yeşil liderlik paneli */
+
+.chairman-side-panel {
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-radius: 26px;
+    padding: 46px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(10, 92, 54, 0.16);
+}
+
+.chairman-side-panel::after {
+    content: '';
+    position: absolute;
+    right: -120px;
+    bottom: -120px;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.14);
+}
+
+.chairman-side-kicker {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.68);
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 2;
+}
+
+.chairman-side-panel h3 {
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    color: #ffffff;
+    margin-bottom: 22px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.chairman-side-panel p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.76);
+    position: relative;
+    z-index: 2;
+}
+
+.chairman-side-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.chairman-side-stats div {
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.chairman-side-stats strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.chairman-side-stats small {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.66);
+}
+
+/* Sağ mesaj kartı */
+
+.chairman-message-card {
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 64px 72px;
+    border: 1px solid rgba(15, 23, 42, 0.055);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.chairman-message-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 54px;
+    right: 54px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    opacity: 0.6;
+}
+
+.chairman-quote-mark {
+    position: absolute;
+    top: 14px;
+    left: 38px;
+    font-size: 150px;
+    font-family: serif;
+    color: var(--accent-green);
+    opacity: 0.055;
+    line-height: 1;
+}
+
+.chairman-message-card p {
+    position: relative;
+    z-index: 2;
+    font-size: 16.3px;
+    line-height: 1.88;
+    color: #0f172a;
+    opacity: 0.84;
+    margin-bottom: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.chairman-message-card .corp-lead {
+    font-size: 18.5px !important;
+    font-weight: 650;
+    opacity: 0.96 !important;
+}
+
+.chairman-message-card strong {
+    color: var(--accent-green);
+    font-weight: 800;
+}
+
+.chairman-signature-premium {
+    margin-top: 54px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+}
+
+.chairman-signature-premium span {
+    width: 42px;
+    height: 3px;
+    background: var(--accent-green);
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+.chairman-signature-premium strong {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.chairman-signature-premium small {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Alt değer kartları */
+
+.chairman-values-grid {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.chairman-value-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.055);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.035);
+    transition: all 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chairman-value-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(10, 92, 54, 0.2);
+    box-shadow: 0 28px 64px rgba(15, 23, 42, 0.075);
+}
+
+.chairman-value-card span {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+}
+
+.chairman-value-card h4 {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.chairman-value-card p {
+    font-size: 13.5px;
+    line-height: 1.72;
+    color: #0f172a;
+    opacity: 0.68;
+    margin: 0;
+}
+
+.chairman-value-card.highlighted {
+    background: #0f172a;
+    border-color: #0f172a;
+}
+
+.chairman-value-card.highlighted span,
+.chairman-value-card.highlighted h4,
+.chairman-value-card.highlighted p {
+    color: #ffffff;
+}
+
+.chairman-value-card.highlighted p {
+    opacity: 0.76;
+}
+
+/* Responsive */
+
+@media (max-width: 1180px) {
+    .chairman-hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .chairman-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chairman-side-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .chairman-side-panel,
+    .chairman-message-card {
+        padding: 34px 26px;
+        border-radius: 20px;
+    }
+
+    .chairman-values-grid,
+    .chairman-side-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .chairman-value-card {
+        padding: 26px;
+    }
+
+    .chairman-quote-mark {
+        font-size: 110px;
+        left: 20px;
+    }
+}

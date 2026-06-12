@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talebiniz Alındı | SGR GRUP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent-green: #0a5c36;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg-soft: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(10, 92, 54, 0.08), transparent 34%),
+                linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        .thanks-card {
+            width: 100%;
+            max-width: 680px;
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            border-radius: 28px;
+            padding: 64px 54px;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thanks-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 54px;
+            right: 54px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+        }
+
+        .check-icon {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: rgba(10, 92, 54, 0.08);
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px auto;
+        }
+
+        .thanks-tag {
+            display: block;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent-green);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -0.045em;
+            margin-bottom: 22px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto 36px auto;
+        }
+
+        .thanks-actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 28px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.35s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: #ffffff;
+            border: 1px solid var(--accent-green);
+        }
+
+        .btn-primary:hover {
+            background: #063c23;
+            border-color: #063c23;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            color: var(--text-main);
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .thanks-card {
+                padding: 48px 26px;
+                border-radius: 22px;
+            }
+
+            .thanks-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="thanks-card">
+        <div class="check-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+        </div>
+
+        <span class="thanks-tag">TALEBİNİZ ALINDI</span>
+        <h1>Teşekkür ederiz.</h1>
+        <p>
+            İletişim talebiniz başarıyla alınmıştır. SGR Grup ekibi, kampanyamız ve proje detayları hakkında
+            en kısa sürede sizinle iletişime geçecektir.
+        </p>
+
+        <div class="thanks-actions">
+            <a href="index.html" class="btn btn-primary">Ana Sayfaya Dön</a>
+            <a href="tel:+905376237201" class="btn btn-secondary">Hemen Ara</a>
+        </div>
+    </main>
+
+</body>
+</html>

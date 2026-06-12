@@ -1,0 +1,442 @@
+/* SGR GRUP - HİZMETLER SAYFASI TASARIMI */
+.services-content-area {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: #ffffff;
+    min-height: 80vh;
+    position: relative;
+    z-index: 10;
+}
+
+.services-content-area.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Kurumsal sayfalardaki şık kutu düzeniyle tam uyumlu */
+.corp-management-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.corp-management-content {
+    background: #ffffff;
+    padding: 64px 72px;
+    border-radius: 20px;
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+}
+/* ==========================================================================
+   SGR GRUP - PREMIUM HİZMETLER SAYFASI
+   ========================================================================== */
+
+.sgr-services-page {
+    background:
+        radial-gradient(circle at top left, rgba(10, 92, 54, 0.055), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    padding: 160px 0 130px 0;
+    min-height: 100vh;
+}
+
+.sgr-services-header {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sgr-services-header p {
+    max-width: 760px;
+    margin: 22px auto 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #0f172a;
+    opacity: 0.72;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sgr-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 78px;
+}
+
+.sgr-service-card {
+    min-height: 360px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 22px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.035);
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sgr-service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(10, 92, 54, 0.08), transparent 42%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(10, 92, 54, 0.035));
+    opacity: 0;
+    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.sgr-service-card::after {
+    content: '';
+    position: absolute;
+    right: -80px;
+    bottom: -80px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(10, 92, 54, 0.1);
+    border-radius: 50%;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sgr-service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(10, 92, 54, 0.2);
+    box-shadow: 0 28px 70px rgba(15, 23, 42, 0.09);
+}
+
+.sgr-service-card:hover::before {
+    opacity: 1;
+}
+
+.sgr-service-card:hover::after {
+    right: -50px;
+    bottom: -50px;
+    border-color: rgba(10, 92, 54, 0.22);
+}
+
+.sgr-service-card-top,
+.sgr-service-card-body,
+.sgr-service-card-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.sgr-service-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.sgr-service-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent-green);
+    letter-spacing: 0.14em;
+}
+
+.sgr-service-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(10, 92, 54, 0.06);
+    color: var(--accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sgr-service-card:hover .sgr-service-arrow {
+    background: var(--accent-green);
+    color: #ffffff;
+    transform: rotate(45deg);
+}
+
+.sgr-service-kicker {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    margin-bottom: 14px;
+}
+
+.sgr-service-card h3 {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+    margin-bottom: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sgr-service-card p {
+    font-size: 14.5px;
+    line-height: 1.72;
+    color: #0f172a;
+    opacity: 0.68;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sgr-service-card-bottom {
+    padding-top: 34px;
+    margin-top: 32px;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.sgr-service-card-bottom span {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0f172a;
+    opacity: 0.58;
+    transition: color 0.35s ease, opacity 0.35s ease;
+}
+
+.sgr-service-card:hover .sgr-service-card-bottom span {
+    color: var(--accent-green);
+    opacity: 1;
+}
+
+.sgr-service-card.featured-service {
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-color: transparent;
+    box-shadow: 0 28px 70px rgba(10, 92, 54, 0.18);
+}
+
+.sgr-service-card.featured-service::before {
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 36%),
+        linear-gradient(135deg, rgba(255,255,255,0.08), transparent);
+    opacity: 1;
+}
+
+.sgr-service-card.featured-service::after {
+    border-color: rgba(255, 255, 255, 0.13);
+}
+
+.sgr-service-card.featured-service .sgr-service-number,
+.sgr-service-card.featured-service .sgr-service-kicker,
+.sgr-service-card.featured-service h3,
+.sgr-service-card.featured-service p,
+.sgr-service-card.featured-service .sgr-service-card-bottom span {
+    color: #ffffff;
+}
+
+.sgr-service-card.featured-service p,
+.sgr-service-card.featured-service .sgr-service-card-bottom span {
+    opacity: 0.78;
+}
+
+.sgr-service-card.featured-service .sgr-service-arrow {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.sgr-service-card.featured-service:hover .sgr-service-arrow {
+    background: #ffffff;
+    color: var(--accent-green);
+}
+
+/* ==========================================================================
+   HİZMET DETAY SAYFASI
+   ========================================================================== */
+
+.sgr-service-detail-page {
+    background:
+        radial-gradient(circle at top right, rgba(10, 92, 54, 0.05), transparent 34%),
+        #ffffff;
+    padding: 170px 0 130px 0;
+    min-height: 100vh;
+}
+
+.sgr-service-detail-layout {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: 72px;
+    align-items: start;
+}
+
+.sgr-service-detail-side {
+    position: sticky;
+    top: 130px;
+    background: linear-gradient(135deg, #0a5c36 0%, #063c23 100%);
+    border-radius: 24px;
+    padding: 44px;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 28px 70px rgba(10, 92, 54, 0.18);
+}
+
+.sgr-service-detail-side::after {
+    content: '';
+    position: absolute;
+    right: -90px;
+    bottom: -90px;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+}
+
+.sgr-service-detail-number {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin-bottom: 34px;
+    opacity: 0.72;
+}
+
+.sgr-service-detail-side .corp-tagline {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.sgr-service-detail-side h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    margin-bottom: 34px;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sgr-detail-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 42px;
+    position: relative;
+    z-index: 2;
+}
+
+.sgr-detail-pill {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 9px 13px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sgr-back-services-btn {
+    position: relative;
+    z-index: 2;
+    background: #ffffff !important;
+    color: var(--accent-green) !important;
+    border-color: #ffffff !important;
+}
+
+.sgr-back-services-btn:hover {
+    background: #f8fafc !important;
+    color: #063c23 !important;
+}
+
+.sgr-service-detail-content {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 64px 72px;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.045);
+    position: relative;
+    overflow: hidden;
+}
+
+.sgr-service-detail-content::before {
+    content: '"';
+    position: absolute;
+    top: -18px;
+    left: 34px;
+    font-size: 150px;
+    font-family: serif;
+    color: var(--accent-green);
+    opacity: 0.055;
+    line-height: 1;
+}
+
+.sgr-service-detail-content p {
+    position: relative;
+    z-index: 2;
+    font-size: 16.5px;
+    line-height: 1.88;
+    color: #0f172a;
+    opacity: 0.84;
+    margin-bottom: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sgr-service-detail-content p:last-child {
+    margin-bottom: 0;
+}
+
+.sgr-service-detail-content strong {
+    color: var(--accent-green);
+    font-weight: 800;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1180px) {
+    .sgr-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sgr-service-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .sgr-service-detail-side {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sgr-services-page,
+    .sgr-service-detail-page {
+        padding: 135px 0 90px 0;
+    }
+
+    .sgr-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 48px;
+    }
+
+    .sgr-service-card {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .sgr-service-card-top {
+        margin-bottom: 34px;
+    }
+
+    .sgr-service-card h3 {
+        font-size: 21px;
+    }
+
+    .sgr-service-detail-side,
+    .sgr-service-detail-content {
+        padding: 34px 26px;
+        border-radius: 20px;
+    }
+
+    .sgr-service-detail-content::before {
+        font-size: 110px;
+        left: 18px;
+    }
+}
