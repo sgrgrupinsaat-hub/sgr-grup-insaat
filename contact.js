@@ -72,7 +72,7 @@ bizimle iletişime geçebilirsiniz.
                         </div>
 
                         <div class="sgr-contact-cards">
-<a href="tel:+905376237201" class="sgr-contact-card">
+<a href="tel:+905419510641" class="sgr-contact-card">
                                 <span class="sgr-contact-icon">
                                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.08 5.18 2 2 0 0 1 5.06 3h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.6 2.5a2 2 0 0 1-.45 2.11L9 10.5a16 16 0 0 0 4.5 4.5l1.17-1.17a2 2 0 0 1 2.11-.45c.8.28 1.64.48 2.5.6A2 2 0 0 1 22 16.92z"></path>
@@ -80,7 +80,7 @@ bizimle iletişime geçebilirsiniz.
                                 </span>
                                 <span>
                                     <small>Telefon</small>
-<strong>0537 623 72 01</strong>
+<strong>0541 951 06 41</strong>
                                 </span>
                             </a>
 
